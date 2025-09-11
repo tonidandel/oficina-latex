@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>3 - Markdown | O Telégrafo ---...---</title>
+  <meta name="description" content="Aprendendo sobre GitHub pages com a ferramenta Jekyll.">
+  <meta name="keywords" content="github, github-pages, websites, static gen, hosting, markdown, gh-pages">
+  <meta name="author" content="Danny Tonidandel">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+  <meta property="og:title" content="3 - Markdown | O Telégrafo ---...---" />
+  <meta property="og:description" content="Aprendendo sobre GitHub pages com a ferramenta Jekyll." />
+  <meta property="og:site_name" content="O Telégrafo ---...---" />
+  <meta property="og:url" content="/2019-08-21-criando-uma-postagem-de-blog-com-markdown.html" />
+  <meta property="og:locale" content="en_US" />
+  <script type="application/ld+json">{"@context":"http://schema.org","@type":"WebPage","headline":"3 - Markdown | O Telégrafo ---...---","author":{"@type":"Person","name":"Danny Tonidandel"},"description":"Aprendendo sobre GitHub pages com a ferramenta Jekyll.","url":"/2019-08-21-criando-uma-postagem-de-blog-com-markdown.html"}</script>
+
+  <link rel="stylesheet" href="/css/main.css">
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  <!-- Google Analytics -->
+
+</head>
+
+
+  <body>
+    
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">O Telégrafo ---...---</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link active" href="/2019-08-21-criando-uma-postagem-de-blog-com-markdown.html">3 - Markdown</a>
+          
+        
+          
+          <a class="page-link" href="/3-jekyll.html">3-Jekyll</a>
+          
+        
+          
+          <a class="page-link" href="/4-jekyll-advanced.html">4-Advanced</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/5-reference.html">5-Ref</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h1 id="o-início">O início</h1>
+<p>A primeira coisa que vamos explorar é a linguagem Markdown.</p>
+<h2 id="1-markdown">1. Markdown</h2>
+<p>O Markdown é uma linguagem simples para aplicar estilo em páginas da web
+ou outros documentos, aplicando poucos símbolos, como *, # ou +, e é bem útil
+para quem não gosta ou não sabe html. É uma ferramenta de diagramação muito útil
+para páginas da Internet, além de outros documentos.
+Os níveis e subníveis de texto podem ser escritos com # Título ou ## Subtítulo 
+ou ### Subsubtítulo.</p>
+<h3 id="entatizar-um-texto">Entatizar um texto</h3>
+<p>Por exemplo, é muito simples escrever em <strong>negrito</strong> utilizando a palavra 
+entre “<strong>**” ou <em>itálico</em>, com “</strong>”. Ou até criar um link utilizando colchetes,
+como a <a href="http://professor.ufop.br/tonidandel">minha página institucional</a>. 
+Se necessário, é poossível fazer uma citação com &gt;. Por exemplo</p>
+
+<blockquote>
+  <p>Mundo Mundo vasto mundo…</p>
+</blockquote>
+
+<p>Ou até uma nota de rodapé,<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> utilizando o comando <code class="highlighter-rouge">[^1]</code>,
+e depois <code class="highlighter-rouge">[^1]: texto da nota</code></p>
+
+<h3 id="criando-listas">Criando listas</h3>
+<p>Podemos também criar listas com <code class="highlighter-rouge">*</code> e listas ordenadas com <code class="highlighter-rouge">1.</code>, tais como:</p>
+
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 2a</li>
+  <li>Item 2b</li>
+</ul>
+
+<p>Ou listas ordenadas, como</p>
+
+<ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 2a</li>
+  <li>Item 2b</li>
+</ol>
+
+<p>Ou de tarefas, como</p>
+
+<ul>
+  <li>[x] Primeiro fazer isso;</li>
+  <li>[x] Segundo, fazer isso;</li>
+  <li>[] Depois aquilo.</li>
+</ul>
+
+<h3 id="inserindo-imagens">Inserindo imagens</h3>
+<p>Ou inserindo imagens, tal utilizando a sintaxe <code class="highlighter-rouge">![Logo UFOP](/images/logo-universidade.svg)</code>, 
+que, no nosso caso, insere a imagem:<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup></p>
+
+<p><img src="/images/logo-universidade.svg" alt="logo-ufop" /></p>
+
+<h3 id="inserindo-código">Inserindo Código</h3>
+<p>Ou até uma fórmula em LateX, como <script type="math/tex">E=mc^2 \,,</script> ou até código de alguma linguagem,
+inserindo aspas simples:</p>
+
+<p><em>Eu acho que você deveria utilizar o pacote da ams, com o comando:</em> <code class="highlighter-rouge">\usepackage{ams}</code>. 
+Para mais linhas de código, use um “tab” ou uma distância de 4 espaços:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Código aqui;
+Cógigo aqui;
+Código aqui;  
+</code></pre></div></div>
+
+<h3 id="tabelas">Tabelas</h3>
+<p>É possível também fazer uma tabela bem simples, utilizando os delimitadores –|–, por exemplo:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Coluna 1</th>
+      <th>Coluna 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>texto linha 1 x coluna 1</td>
+      <td>texto linha 1 x coluna 2</td>
+    </tr>
+    <tr>
+      <td>texto linha 2 x coluna 1</td>
+      <td>texto linha 2 x coluna 2</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="2-instalação-do-jekyll">2. Instalação do Jekyll</h2>
+
+<h2 id="após-a-instalação-do-jekyll">Após a instalação do Jekyll</h2>
+<p>Em um terminal Linux, crie uma pasta em uma determinada localização,
+“blog” por exemplo e entre nesta pasta:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir blog  
+$ cd blog
+</code></pre></div></div>
+
+<p>Para criar um site estático simples dentro da pasta, basta usar o comando:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$~blog/ jekyll new .
+</code></pre></div></div>
+
+<h2 id="fazendo-uma-postagem">Fazendo uma postagem</h2>
+<p>Para criar uma postagem, basta criar um arquivo de texto simples em Markdown,
+com a extensão <code class="highlighter-rouge">.md</code>, e salvá-la na pasta <code class="highlighter-rouge">_posts</code>, no formato:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ANO-MES-DIA-titulo-da-postagem.md
+</code></pre></div></div>
+
+<h2 id="publicando">Publicando</h2>
+<p>Para atualizar o servidor jekyll, basta fornecer os comandos, em um terminal 
+Linux:
+	$ jekyll build
+	$ jekyll serve</p>
+
+<p>Após isso será aberta uma janela da página que foi criada no servidor local. 
+Basta abrir o endereço informado em <code class="highlighter-rouge">server adress</code> para ver o resultado:</p>
+
+<p><img src="/images/blog-jekyll1.png" alt="Jekyll-image" /></p>
+
+<p>A partir deste momento, todo o conteúdo do site criado automaticamente
+pelo Jekyll, estará disponível na pasta <code class="highlighter-rouge">_site</code>.</p>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>A nota é essa aqui ó. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Colocar a imagem em uma pasta criada na pasta raiz (root) do projeto. Neste caso, criamos a pasta images. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-col-wrapper" >
+    <div class="footer-nav">
+        
+          
+          <a class="page-link active" href="/2019-08-21-criando-uma-postagem-de-blog-com-markdown.html">3 - Markdown</a>
+          
+        
+          
+          <a class="page-link" href="/3-jekyll.html">3-Jekyll</a>
+          
+        
+          
+          <a class="page-link" href="/4-jekyll-advanced.html">4-Advanced</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/5-reference.html">5-Ref</a>
+          
+        
+          
+        
+          
+        
+    </div>
+    </div>
+      <h2 class="footer-heading"><a href="/">O Telégrafo ---...---</a> - <a href="https://creativecommons.org/licenses/by-sa/4.0/">cc-by-sa</a> <a href="https://github.com/tonidandel">Danny Tonidandel</a> - 2019.</h2> 
+  </div>
+</footer>
+
+
+  </body>
+
+</html>

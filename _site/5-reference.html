@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>5-Ref | O Telégrafo ---...---</title>
+  <meta name="description" content="Aprendendo sobre GitHub pages com a ferramenta Jekyll.">
+  <meta name="keywords" content="github, github-pages, websites, static gen, hosting, markdown, gh-pages">
+  <meta name="author" content="Danny Tonidandel">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+  <meta property="og:title" content="5-Ref | O Telégrafo ---...---" />
+  <meta property="og:description" content="Aprendendo sobre GitHub pages com a ferramenta Jekyll." />
+  <meta property="og:site_name" content="O Telégrafo ---...---" />
+  <meta property="og:url" content="/5-reference.html" />
+  <meta property="og:locale" content="en_US" />
+  <script type="application/ld+json">{"@context":"http://schema.org","@type":"WebPage","headline":"5-Ref | O Telégrafo ---...---","author":{"@type":"Person","name":"Danny Tonidandel"},"description":"Aprendendo sobre GitHub pages com a ferramenta Jekyll.","url":"/5-reference.html"}</script>
+
+  <link rel="stylesheet" href="/css/main.css">
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  <!-- Google Analytics -->
+
+</head>
+
+
+  <body>
+    
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">O Telégrafo ---...---</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/2019-08-21-criando-uma-postagem-de-blog-com-markdown.html">3 - Markdown</a>
+          
+        
+          
+          <a class="page-link" href="/3-jekyll.html">3-Jekyll</a>
+          
+        
+          
+          <a class="page-link" href="/4-jekyll-advanced.html">4-Advanced</a>
+          
+        
+          
+        
+          
+          <a class="page-link active" href="/5-reference.html">5-Ref</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h1 id="reference">Reference</h1>
+
+<p>The basic components of the Jekyll stack are described below.</p>
+
+<hr />
+
+<h1 id="markdown">Markdown</h1>
+
+<p><img src="images/markdown.png" alt="markdown icon" /></p>
+
+<p><a href="https://daringfireball.net/projects/markdown/" target="_blank">Markdown</a> is a standard to simplify writing content for the web. 
+<a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/" target="_blank">GitHub markdown flavor</a> can be used any where on GitHub and in Jekyll.
+The basics are intuitive, you can learn in about <a href="https://evanwill.github.io/_drafts/notes/markdown-minute.html" target="_blank">a minute</a>!</p>
+
+<p>Check out this <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">GitHub Markdown tutorial</a> for more info.</p>
+
+<blockquote>
+  <p>Note: Jekyll uses the Ruby based <a href="https://kramdown.gettalong.org/" target="_blank">kramdown</a> to compile Markdown, so supports a few extras beyond the standard syntax. Check the <a href="https://kramdown.gettalong.org/quickref.html" target="_blank">kramdown quickref</a>.</p>
+</blockquote>
+
+<p>This Markdown code:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## Heading two
+
+### Heading three, etc.
+
+Any text with no empty lines between will become a paragraph.
+Font can be *Italic* or **Bold**.
+Code can be highlighted with `backticks`.
+
+Links look like this [GitHub Help](https://help.github.com/).
+
+List:
+- dog
+- cat
+
+Numbered:
+1. one
+2. two 
+
+&gt; Block quote.
+
+-------
+</code></pre></div></div>
+
+<p>Will be rendered like this:</p>
+
+<h2 id="heading-two">Heading two</h2>
+
+<h3 id="heading-three-etc">Heading three, etc.</h3>
+
+<p>Any text with no empty lines between will become a paragraph.
+Font can be <em>Italic</em> or <strong>Bold</strong>.
+Code can be highlighted with <code class="highlighter-rouge">backticks</code>.</p>
+
+<p>Links look like this <a href="https://help.github.com/">GitHub Help</a>.</p>
+
+<p>List:</p>
+<ul>
+  <li>dog</li>
+  <li>cat</li>
+</ul>
+
+<p>Numbered:</p>
+<ol>
+  <li>one</li>
+  <li>two</li>
+</ol>
+
+<blockquote>
+  <p>Block quote.</p>
+</blockquote>
+
+<hr />
+
+<h1 id="yaml">YAML</h1>
+
+<p><img src="images/yaml-icon.png" alt="yaml icon" /></p>
+
+<p><a href="http://www.yaml.org/" target="_blank">YAML</a> is a human readable plain text data format.
+It is used in Jekyll for configuration, site data, and front matter:</p>
+
+<ul>
+  <li>Jekyll projects are <a href="https://jekyllrb.com/docs/configuration/" target="_blank">configured</a> using the <code class="highlighter-rouge">_config.yml</code> file.</li>
+  <li>YAML, JSON, or CSV files in the <code class="highlighter-rouge">_data</code> directory are exposed by Jekyll as <a href="https://jekyllrb.com/docs/datafiles/" target="_blank">site data</a> for Liquid templating.</li>
+  <li>Any file in a Jekyll project with YAML <a href="https://jekyllrb.com/docs/frontmatter/" target="_blank">Front matter</a> will be processed, others are just directly copied the the <code class="highlighter-rouge">_site</code> directory on build.
+For example, the front matter for the markdown file generating this page looks like:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: default
+title: 5-Ref
+---
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<hr />
+
+<h1 id="liquid">Liquid</h1>
+
+<p><img src="images/liquid-icon.png" alt="liquid icon" /></p>
+
+<p><a href="http://shopify.github.io/liquid/" target="_blank">Liquid</a> is a flexible template language.
+<a href="https://jekyllrb.com/docs/templates/" target="_blank">In Jekyll</a> it allows you to layout pages built from modular components and data, using the <code class="highlighter-rouge">_includes</code>, <code class="highlighter-rouge">_layouts</code>, and <code class="highlighter-rouge">_data</code> directories.
+Liquid includes features such as operators, loops, and filters to manipulate raw content. 
+Liquid statements are enclosed by <code class="highlighter-rouge">{%  %}</code> and variables in <code class="highlighter-rouge">{{  }}</code>.
+For example, the <code class="highlighter-rouge">default</code> layout used for this page looks like:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+  {% include head.html %}
+  <span class="nt">&lt;body&gt;</span>
+    {% include header.html %}
+    <span class="nt">&lt;main</span> <span class="na">class=</span><span class="s">"page-content"</span> <span class="na">aria-label=</span><span class="s">"Content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"wrapper"</span><span class="nt">&gt;</span>
+        {{ content }}
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/main&gt;</span>
+    {% include footer.html %}
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h1 id="sass">Sass</h1>
+
+<p><img src="images/sass-icon.png" alt="sass icon" /></p>
+
+<p><a href="http://sass-lang.com/" target="_blank">Sass</a> is a CSS extension / preprocessor. 
+All normal CSS is valid SCSS, but Sass adds many powerful functions and programatic features. 
+Writing SCSS is often easier and more sensible, for example by supporting nesting, variables, and operators. 
+Jekyll lets you write SASS in modular chucks called partials, in the <code class="highlighter-rouge">_sass</code> directory, that will be combined and compiled into normal CSS files when the site is built.
+For example, notice the variables, nesting, and operators in the SCSS below:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$base-font-family: Helvetica, sans-serif;
+$base-font-size: 16px;
+$primary-color: #333;
+$padding-links: 6px 12px;
+
+nav {
+    font-family: $base-font-family;
+    font-size: $base-font-size * 1.25;
+    color: lighten($primary-color, 25%);
+    ul {
+        list-style: none;
+    }
+    li { display: inline-block; }
+    a {
+        padding: $padding-links;
+        text-decoration: none;
+    }
+}
+
+@import "base";
+</code></pre></div></div>
+
+<hr />
+
+<h1 id="themes">Themes</h1>
+
+<p><a href="https://jekyllrb.com/docs/themes/" target="_blank">Jekyll themes</a> are really just a skeleton of directories and files making up a project. 
+Some are Gems and can be installed by adding the theme to the config and gem file, which case you will not see the theme directories in your project. 
+Others should just be downloaded and added to your project directory manually.</p>
+<ul>
+  <li>Search for Jekyll themes, there are lots of directories: <a href="https://rubygems.org/search?utf8=%E2%9C%93&amp;query=jekyll-theme" target="_blank">Gem based</a>, <a href="http://themes.jekyllrc.org/" target="_blank">“Jekyll Themes”</a>, and another <a href="http://jekyllthemes.org/" target="_blank">“Jekyll Themes”</a></li>
+  <li><a href="https://pages.github.com/themes/" target="_blank">Themes supported by gh-pages</a>, these can be added to <code class="highlighter-rouge">_config.yml</code> as in <a href="/3-jekyll.html">3-Jekyll</a> example and are the same as the <em>Theme Chooser</em> options. Only <code class="highlighter-rouge">minima</code> has navigation, alternative layouts, or blog post support built in–so they are not very useful. However, looking at the repository will give you info about how to customize the themes.</li>
+  <li><a href="https://github.com/blog/2464-use-any-theme-with-github-pages" target="_blank">Remote themes on GitHub</a>, any theme that is hosted on GitHub can be used by adding <code class="highlighter-rouge">remote_theme: owner/name</code> to <code class="highlighter-rouge">_config.yml</code>. You can find options in the <a href="https://github.com/topics/jekyll-theme" target="_blank">jekyll-theme topic</a>.</li>
+</ul>
+
+<hr />
+
+<h1 id="gh-pages-jekyll-version-and-plugins">GH-Pages Jekyll Version and Plugins</h1>
+
+<p>If you are developing for gh-pages, it is a good idea to keep your environment in sync with what is used on GitHub. 
+This can be done automatically using the <a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/" target="_blank">github-pages gem</a> (although I rarely bother to do so).
+To see what version of Jekyll and which plugins GH-Pages use, take a look at the <a href="https://pages.github.com/versions/" target="_blank">Dependency Versions page</a>.
+Most of these are builtin dependencies of Jekyll, but there are a few plugins of interest.
+To use the extra plugins, add them to your <code class="highlighter-rouge">_config.yml</code>, under <code class="highlighter-rouge">gems:</code>, not in the the gemfile (since gh-pages ignores that).</p>
+
+<ul>
+  <li>jekyll-seo-tag (GitHub <a href="https://help.github.com/articles/search-engine-optimization-for-github-pages/" target="_blank">info</a>, <a href="https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md" target="_blank">usage</a>, basically add <code class="highlighter-rouge">{% seo %}</code> to the <code class="highlighter-rouge">&lt;head&gt;</code> of your pages, and make sure you have all the metadata in your <code class="highlighter-rouge">_config.yml</code>).</li>
+  <li>jekyll-sitemap (GitHub <a href="https://help.github.com/articles/sitemaps-for-github-pages/" target="_blank">info</a>, <a href="https://github.com/jekyll/jekyll-sitemap" target="_blank">repo</a>).</li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-col-wrapper" >
+    <div class="footer-nav">
+        
+          
+          <a class="page-link" href="/2019-08-21-criando-uma-postagem-de-blog-com-markdown.html">3 - Markdown</a>
+          
+        
+          
+          <a class="page-link" href="/3-jekyll.html">3-Jekyll</a>
+          
+        
+          
+          <a class="page-link" href="/4-jekyll-advanced.html">4-Advanced</a>
+          
+        
+          
+        
+          
+          <a class="page-link active" href="/5-reference.html">5-Ref</a>
+          
+        
+          
+        
+          
+        
+    </div>
+    </div>
+      <h2 class="footer-heading"><a href="/">O Telégrafo ---...---</a> - <a href="https://creativecommons.org/licenses/by-sa/4.0/">cc-by-sa</a> <a href="https://github.com/tonidandel">Danny Tonidandel</a> - 2019.</h2> 
+  </div>
+</footer>
+
+
+  </body>
+
+</html>

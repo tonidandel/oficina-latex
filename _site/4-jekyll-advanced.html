@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>4-Advanced | O Telégrafo ---...---</title>
+  <meta name="description" content="Aprendendo sobre GitHub pages com a ferramenta Jekyll.">
+  <meta name="keywords" content="github, github-pages, websites, static gen, hosting, markdown, gh-pages">
+  <meta name="author" content="Danny Tonidandel">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+  <meta property="og:title" content="4-Advanced | O Telégrafo ---...---" />
+  <meta property="og:description" content="Aprendendo sobre GitHub pages com a ferramenta Jekyll." />
+  <meta property="og:site_name" content="O Telégrafo ---...---" />
+  <meta property="og:url" content="/4-jekyll-advanced.html" />
+  <meta property="og:locale" content="en_US" />
+  <script type="application/ld+json">{"@context":"http://schema.org","@type":"WebPage","headline":"4-Advanced | O Telégrafo ---...---","author":{"@type":"Person","name":"Danny Tonidandel"},"description":"Aprendendo sobre GitHub pages com a ferramenta Jekyll.","url":"/4-jekyll-advanced.html"}</script>
+
+  <link rel="stylesheet" href="/css/main.css">
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  <!-- Google Analytics -->
+
+</head>
+
+
+  <body>
+    
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">O Telégrafo ---...---</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/2019-08-21-criando-uma-postagem-de-blog-com-markdown.html">3 - Markdown</a>
+          
+        
+          
+          <a class="page-link" href="/3-jekyll.html">3-Jekyll</a>
+          
+        
+          
+          <a class="page-link active" href="/4-jekyll-advanced.html">4-Advanced</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/5-reference.html">5-Ref</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h1 id="developing-with-jekyll">Developing with Jekyll</h1>
+
+<p>Jekyll can also be used on your local machine with or without themes to generate any type of web site.
+Create a repository on GitHub for your project, <code class="highlighter-rouge">pull</code> down the up-to-date code, and use Jekyll’s built in development server to work on your laptop. 
+Once you have finished, <code class="highlighter-rouge">push</code> your work to GitHub to share or deploy on gh-pages.</p>
+
+<p>Basically, Jekyll provides a stack of web development tools that operate over a directory of text files to output a static site.
+You could install and use these tools separately, but bundling them into a single app makes the process simpler and more powerful.
+The Jekyll stack includes:</p>
+
+<ul>
+  <li>Ruby (core and extensions)</li>
+  <li>kramdown (Markdown for base content)</li>
+  <li>Liquid (templating)</li>
+  <li>Sass (css preprocessing)</li>
+  <li>YAML (data, config)</li>
+</ul>
+
+<blockquote>
+  <p>For basic information about these components check the <a href="/5-reference.html">Reference page</a>.</p>
+</blockquote>
+
+<p>There is not a GUI, Jekyll uses a handful of terminal commands to do everything. 
+For example, create a new project with <code class="highlighter-rouge">jekyll new project-name</code> and start the local development server with <code class="highlighter-rouge">jekyll serve</code>.</p>
+
+<p><img src="images/jekyll-project-serve.png" alt="jekyll project and terminal" /></p>
+
+<blockquote>
+  <p>Although Jekyll supports <a href="https://jekyllrb.com/docs/plugins/" target="_blank">plugins</a>, gh-pages only allows a few standard ones, so avoid them if you want to use the automatic build.</p>
+</blockquote>
+
+<h1 id="project-directory-tour">Project Directory Tour</h1>
+
+<p>A Jekyll project is simply a directory of files, the source code for building a web site. 
+A few directories have specialized uses for Jekyll and are denoted with an <code class="highlighter-rouge">_</code> underscore beginning the name.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">example-site</code>: Your Jekyll project is a Git repository. The top level contains configurations and files that will become root level pages in your site. Edit the overall site settings in <code class="highlighter-rouge">_config.yml</code>. Changes to <code class="highlighter-rouge">_config.yml</code> are not automatically refreshed during <code class="highlighter-rouge">jekyll serve</code>, you have to stop the server and restart.
+    <ul>
+      <li><code class="highlighter-rouge">_layouts</code>: The basic templates for complete web pages, generally constructed with Liquid includes. They are called by YAML front matter on each page or post.</li>
+      <li><code class="highlighter-rouge">_includes</code>: Modular chunks of HTML that can be called into a page layout by Liquid. For example <code class="highlighter-rouge">{% include head.html %}</code> in a page layout would add the include <code class="highlighter-rouge">head.html</code> from the <code class="highlighter-rouge">_includes</code> directory.</li>
+      <li><code class="highlighter-rouge">_posts</code>: Files in this directory will become blog post-like objects. They always have a date and title in the file name. If your site isn’t a blog, you don’t have to add a <code class="highlighter-rouge">_posts</code> directory. Other directories can be designated <a href="https://jekyllrb.com/docs/collections/" target="_blank">Collections</a> to create regular groups of pages with properties similar to Posts.</li>
+      <li><code class="highlighter-rouge">_sass</code>: Contains the modular <code class="highlighter-rouge">.scss</code> partials that will be pulled into your main CSS for the site. File names should start with an underscore.</li>
+      <li><code class="highlighter-rouge">_data</code>: YAML, JSON, and CSV files in this directory will be exposed as variables to the build engine so that values can be called into pages using Liquid. You can use this data to create pages, make menus, or fill content anywhere in your site.</li>
+      <li><code class="highlighter-rouge">assets</code> / <code class="highlighter-rouge">css</code> / <code class="highlighter-rouge">images</code>: Directories without an underscore are copied to the generated site. One should contain a base SCSS file used to compile the partials into the site’s CSS file. Any file with no YAML front matter will also be simply copied without processing, for example images or java script libraries.</li>
+      <li><code class="highlighter-rouge">_site</code>: This is the built out version of your new static site. Never modify files in this directory. It will be completely deleted and rebuilt with each <code class="highlighter-rouge">jekyll serve</code> or <code class="highlighter-rouge">jekyll build</code>. If you want to deploy your site to a static web host, copy this directory to your server!</li>
+    </ul>
+  </li>
+</ul>
+
+<p>For example, check out the repository used to build this site, <a href="https://github.com/evanwill/go-go-ghpages" target="_blank">go-go-ghpages</a>.
+Fork it and start editing file to see how it works!</p>
+
+<h1 id="basic-workflow">Basic Workflow</h1>
+
+<p>Set up a repository on GitHub and active gh-pages.</p>
+
+<ul>
+  <li>Git clone or pull the project repository</li>
+  <li>Jekyll serve, <code class="highlighter-rouge">jekyll s</code></li>
+  <li>Edit files and test locally</li>
+  <li>Commit changes</li>
+  <li>Git push to GitHub</li>
+  <li>Gh-pages will automatically rebuild!</li>
+</ul>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-col-wrapper" >
+    <div class="footer-nav">
+        
+          
+          <a class="page-link" href="/2019-08-21-criando-uma-postagem-de-blog-com-markdown.html">3 - Markdown</a>
+          
+        
+          
+          <a class="page-link" href="/3-jekyll.html">3-Jekyll</a>
+          
+        
+          
+          <a class="page-link active" href="/4-jekyll-advanced.html">4-Advanced</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/5-reference.html">5-Ref</a>
+          
+        
+          
+        
+          
+        
+    </div>
+    </div>
+      <h2 class="footer-heading"><a href="/">O Telégrafo ---...---</a> - <a href="https://creativecommons.org/licenses/by-sa/4.0/">cc-by-sa</a> <a href="https://github.com/tonidandel">Danny Tonidandel</a> - 2019.</h2> 
+  </div>
+</footer>
+
+
+  </body>
+
+</html>

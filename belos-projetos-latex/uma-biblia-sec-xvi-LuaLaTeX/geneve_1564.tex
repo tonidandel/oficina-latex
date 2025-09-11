@@ -1,0 +1,165 @@
+% Magic comments - Informa ao compilador algumas regras de execução, como tipo de compilação ou codificação do texto
+% !TeX root = geneve_1564.tex
+% !TeX encoding = UTF-8
+% !BIB TS-program = LuaLaTex
+\documentclass[twocolumn,paper=a4,pagesize=pdftex,12pt,headinclude=on]{scrbook}
+\areaset[1in]{5in}{11in}
+
+\usepackage{bigfoot}
+\usepackage{ragged2e}
+
+\usepackage{fontspec}
+%\usepackage{xunicode}
+\defaultfontfeatures{Ligatures=Historic,Contextuals=Alternate,Numbers=OldStyle,RawFeature={+ss02,+cv01,+dlig}}
+\setmainfont[RawFeature={+ss02,+cv01,+ss05,+dlig},ItalicFeatures={RawFeature=+cv04,CharacterVariant=5:2}]{EB Garamond}
+% Do the replacements manually in titles, to not ruin the textsc
+\newfontfamily\booktitlefont[RawFeature={-ss02},LetterSpace=40,WordSpace=6]{EB Garamond}
+\newfontfamily\spacedfont[RawFeature={-ss02},LetterSpace=20,WordSpace=3]{EB Garamond}
+\newfontfamily\lettrinefont{EB Garamond Initials}
+\newfontfamily\headerfont{EB Garamond}
+
+\usepackage{graphicx}
+\usepackage{lettrine}
+
+\renewcommand{\LettrineFontHook}{\lettrinefont}
+
+
+% Verse references
+% To be adjusted
+\usepackage{bibleref-french}
+\renewcommand*{\BRchvsep}{.}%
+\renewcommand*{\BRvsep}{,}%
+\setbooktitle{Ex}{Exo.}%
+\setbooktitle{Dt}{Deut.}%
+\setbooktitle{Job}{Iob}%
+\setbooktitle{Ps}{Pseau.}%
+\setbooktitle{Ws}{Sap.}%
+\setbooktitle{Qo}{Eccl\-siast.}%
+\setbooktitle{Ec}{Ecclestiasti.}%
+\setbooktitle{He}{Hebr.}%
+\setbooktitle{Je}{Ierem.}%
+\setbooktitle{Mt}{Matt.}%
+\setbooktitle{Mc}{Marc}%
+\setbooktitle{Jn}{Iean}%
+\setbooktitle{Ac}{Act.}%
+\setbooktitle{ICo}{1.Cor.}%
+\setbooktitle{Col}{Colos.}%
+\setbooktitle{Ep}{Ephes.}%
+\renewcommand{\BRbooktitlestyle}{\textit}%
+
+
+% Environments
+\usepackage{setspace}
+\newenvironment{bookcomment}
+  {\begin{spacing}{0.8}\itshape\scriptsize\hspace{-1em}}
+  {\end{spacing}}
+
+
+\newenvironment{chaptercomment}
+  {%
+    \setlength{\leftskip}{1em}
+    \setlength{\rightskip}{1em}
+    \begin{spacing}{0.8}
+      \itshape\tiny\hspace{-2em}}
+  {%
+    \end{spacing}
+    \setlength{\leftskip}{0pt}
+    \setlength{\rightskip}{0pt}
+  }
+
+% Footnotes
+\usepackage{alphalph}
+\DeclareNewFootnote{main}[alph]
+\renewcommand{\thefootnotemain}{\alphalph{\value{footnotemain}}}
+\DeclareNewFootnote{chapter}[Roman]
+\DeclareNewFootnote{verse}[arabic]
+
+
+\setlength{\marginparwidth}{4.3em}% adjust to your document's needs
+\newcommand{\marginnotes}[2]{%
+  \marginpar{\vspace{#1}\tiny#2}
+}
+\newcommand{\fakenote}[3][\space]{%
+   \par\noindent#1#2~\justifying#3
+}
+
+
+% Bible verses
+\newcounter{verse}
+\newcommand{\bverse}{%
+  \addtocounter{verse}{1}
+  \theverse\quad
+}
+
+\newcommand{\bversenopar}[1][\indent]{%
+   \addtocounter{verse}{1}\\#1\theverse~
+}
+
+\newcommand{\bversenonum}{%
+   \addtocounter{verse}{1}
+   \par
+}
+
+
+\usepackage{titlesec}
+% Use fourier ornaments
+\usepackage{fourier-orns}
+
+% Bible books
+\newcommand{\bbook}[4][]{%
+  \makebox[\textwidth][c]{\includegraphics[width=6in]{#4}}
+  \chapter[#1]{#2,\\\large #3\\\char"2766}
+}
+\titleformat{\chapter}[hang]%
+   {\centering\huge}%
+   {}%
+   {0pt}%
+   {}
+\titlespacing*{\chapter}
+  {0pt}{0pt}{5pt}
+
+% Bible chapters
+\newcommand{\bchapter}[1][chap.]{%
+   \setcounter{verse}{0}%
+   \def\chaptertitle{#1}
+   \section{}{}
+   \setcounter{footnotemain}{0}
+}
+
+\renewcommand{\thesection}{\roman{section}}
+\titleformat{\section}[hang]%
+   {\booktitlefont\centering}%
+   {\textsc{\chaptertitle\ \thesection}.}%
+   {5pt}%
+   {}
+\titlespacing*{\section}
+  {0pt}{0pt}{0pt}
+
+
+% Headings
+\usepackage{scrpage2}
+\rofoot[]{}
+\ohead[\pagemark]{\pagemark}
+
+\pagestyle{scrplain}
+\renewcommand*{\chapterpagestyle}{scrheadings}
+
+
+% Paragraphs
+
+\setlength{\parindent}{-5pt}
+\setlength{\parskip}{0pt}
+
+
+\linespread{0.9}
+\setlength{\columnsep}{6mm}
+
+% Shortcut, we're using this a lot
+\let\lb\linebreak
+
+\begin{document}
+
+\input{livres/genese}
+
+\end{document}
+

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>3-Jekyll | O Telégrafo ---...---</title>
+  <meta name="description" content="Aprendendo sobre GitHub pages com a ferramenta Jekyll.">
+  <meta name="keywords" content="github, github-pages, websites, static gen, hosting, markdown, gh-pages">
+  <meta name="author" content="Danny Tonidandel">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+  <meta property="og:title" content="3-Jekyll | O Telégrafo ---...---" />
+  <meta property="og:description" content="Aprendendo sobre GitHub pages com a ferramenta Jekyll." />
+  <meta property="og:site_name" content="O Telégrafo ---...---" />
+  <meta property="og:url" content="/3-jekyll.html" />
+  <meta property="og:locale" content="en_US" />
+  <script type="application/ld+json">{"@context":"http://schema.org","@type":"WebPage","headline":"3-Jekyll | O Telégrafo ---...---","author":{"@type":"Person","name":"Danny Tonidandel"},"description":"Aprendendo sobre GitHub pages com a ferramenta Jekyll.","url":"/3-jekyll.html"}</script>
+
+  <link rel="stylesheet" href="/css/main.css">
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+  <!-- Google Analytics -->
+
+</head>
+
+
+  <body>
+    
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">O Telégrafo ---...---</a>
+
+    <nav class="site-nav">
+      <span class="menu-icon">
+        <svg viewBox="0 0 18 15" width="18px" height="15px">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </span>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/2019-08-21-criando-uma-postagem-de-blog-com-markdown.html">3 - Markdown</a>
+          
+        
+          
+          <a class="page-link active" href="/3-jekyll.html">3-Jekyll</a>
+          
+        
+          
+          <a class="page-link" href="/4-jekyll-advanced.html">4-Advanced</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/5-reference.html">5-Ref</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h1 id="github-jekyll-project">GitHub Jekyll Project</h1>
+
+<p><a href="https://jekyllrb.com/" target="_blank">Jekyll</a> is a static site generator originally focused on creating simple blogs from plain text files.
+It has developed into a fully featured generator used on all types of web projects from tiny to huge (browse the <a href="https://jekyllrb.com/showcase/" target="_blank">Showcase</a>).</p>
+
+<figure>
+  <img src="/images/jekyll.png" alt="jekyll logo" style="width:45%;" />
+  
+</figure>
+
+<p>Gh-pages uses a builtin Jekyll build service to generate all static web content.
+The basic demos presented so far don’t actually use any Jekyll features.
+However, a full fledged Jekyll project can be created with just a few files in a repository.</p>
+
+<blockquote>
+  <p>Note: file names starting with an underscore <code class="highlighter-rouge">_</code> are special files to Jekyll. 
+Be sure to include them correctly!</p>
+</blockquote>
+
+<p>Demo using the <a href="https://github.com/jekyll/minima" target="_blank">Minima</a> theme:</p>
+
+<ol>
+  <li>Create a new repository:
+    <ul>
+      <li>Click the + sign in the upper right and select <em>New repository</em>.</li>
+      <li>Give the repository a nice name</li>
+      <li>Check the <em>Initialize this repository with a README</em> option</li>
+      <li>Click <em>Add .gitignore</em>, search for jekyll, and select it</li>
+      <li>Click the <em>Create repository</em> button.</li>
+    </ul>
+  </li>
+  <li>Create a <code class="highlighter-rouge">_config.yml</code> file to setup your Jekyll project (check the example <a href="https://github.com/jekyll/minima/blob/master/_config.yml" target="_blank">config</a> for all the options):
+    <ul>
+      <li>Click the <em>Create new file</em> button on the repository page.</li>
+      <li>Name the file <code class="highlighter-rouge">_config.yml</code>.</li>
+      <li>
+        <p>Add the basic YAML fields required by Jekyll:</p>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># basic options
+title: Your awesome title
+author: GitHub User
+email: your-email@domain.com
+description: A wonderful site
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+theme: minima
+</code></pre></div>        </div>
+      </li>
+    </ul>
+
+    <p>Be careful with indentation, YAML likes exactly 2 spaces.</p>
+  </li>
+  <li>Create a <code class="highlighter-rouge">about.md</code> file for the About page.
+    <ul>
+      <li>From the repository’s main page, click the <em>Create new file</em> button.</li>
+      <li>Name the file <code class="highlighter-rouge">about.md</code>.</li>
+      <li>
+        <p>At the top of the file add YAML Front Matter. Add some content. For example:</p>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: page
+title: About
+---
+
+This is an about page about this awesome site.
+Hope you love it!
+
+Reasons:
+- its great.
+- its a test.
+
+## Other thoughts
+
+This is great.
+</code></pre></div>        </div>
+      </li>
+      <li>Commit the changes.</li>
+    </ul>
+  </li>
+  <li>Activate gh-pages:
+    <ul>
+      <li>Click on the repository’s <em>Settings</em> tab.</li>
+      <li>Scroll down to the <em>GitHub Pages</em> options.</li>
+      <li>Click <em>Source</em>, select <em>Master branch</em>, and click <em>Save</em>.</li>
+      <li>Wait for a minute for gh-pages to build. The live link will appear in the options.</li>
+    </ul>
+  </li>
+  <li>Add a blog post:
+    <ul>
+      <li>From the repository’s main page, click the <em>Create new file</em> button.</li>
+      <li>Create a new directory by typing <code class="highlighter-rouge">_posts/</code>. The name field will update.</li>
+      <li>Name the file <code class="highlighter-rouge">2017-04-18-first-post.md</code> (post filenames must start with a date, use <code class="highlighter-rouge">-</code> to replace spaces).</li>
+      <li>
+        <p>Add YAML Front Matter and some content, for example,</p>
+
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+layout: post
+title: A Great First Post
+---
+
+This is it!
+What a wonderful post!
+</code></pre></div>        </div>
+      </li>
+      <li>Commit the changes, wait a minute for gh-pages to rebuild the site.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="congrats">Congrats!</h2>
+
+<p>You have a Jekyll blog!</p>
+
+<p>Any markdown files added to the <code class="highlighter-rouge">_post</code> directory with the correct filename convention will become blog post on your site. 
+Markdown files added to the root directory will be come pages and show up in the navigation.</p>
+
+<p>Read the <a href="https://github.com/jekyll/minima" target="_blank">Minima</a> documentation to learn about the customization options–or just look at how the repository is set up for an example. 
+If you put any file in the same place as the theme’s structure, your version will replace it.</p>
+
+<p>Thanks Octocat!</p>
+
+<figure>
+  <img src="/images/octojekyll.png" alt="octocat with jekyll" style="width:45%;" />
+  
+</figure>
+
+<blockquote>
+  <p>If you want to collaborate on the blog, add other GitHub users in the <em>Settings</em> tab. Look for <em>Collaborators</em> on the left side menu.
+You can keep track of the project using the <em>Issues</em> or <em>Projects</em> features.
+For information about using different themes, check the <a href="/5-reference.html">Reference page</a>.</p>
+</blockquote>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-col-wrapper" >
+    <div class="footer-nav">
+        
+          
+          <a class="page-link" href="/2019-08-21-criando-uma-postagem-de-blog-com-markdown.html">3 - Markdown</a>
+          
+        
+          
+          <a class="page-link active" href="/3-jekyll.html">3-Jekyll</a>
+          
+        
+          
+          <a class="page-link" href="/4-jekyll-advanced.html">4-Advanced</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/5-reference.html">5-Ref</a>
+          
+        
+          
+        
+          
+        
+    </div>
+    </div>
+      <h2 class="footer-heading"><a href="/">O Telégrafo ---...---</a> - <a href="https://creativecommons.org/licenses/by-sa/4.0/">cc-by-sa</a> <a href="https://github.com/tonidandel">Danny Tonidandel</a> - 2019.</h2> 
+  </div>
+</footer>
+
+
+  </body>
+
+</html>
